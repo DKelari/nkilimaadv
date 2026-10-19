@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parent
 DATA = ROOT / "bookings.json"
 EAT = timezone(timedelta(hours=3))
 LOCK = threading.Lock()
-SLOTS = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"]
+SLOTS = ["12:00", "13:00", "14:00", "15:00", "16:00", "17:00"]
 MODES = {"virtual", "chambers"}
 MATTERS = {
     "Family & child law",

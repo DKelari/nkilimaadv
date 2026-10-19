@@ -1,5 +1,5 @@
 (function () {
-  const SLOTS = ["09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00"];
+  const SLOTS = ["12:00", "13:00", "14:00", "15:00", "16:00", "17:00"];
   const DOW = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   const header = document.querySelector(".site-header");
@@ -505,7 +505,7 @@
       if (summary) summary.textContent = "";
       return;
     }
-    dayNote.textContent = "Each consultation is one hour. The last concludes at 4:00 p.m.";
+    dayNote.textContent = "Each consultation is one hour. The last concludes at 6:00 p.m.";
     if (form) form.hidden = false;
     if (summary) {
       summary.textContent =
