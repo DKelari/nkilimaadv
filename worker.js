@@ -17,6 +17,11 @@ export default {
       url.hostname = "www.nkilimaadv.com";
       return Response.redirect(url.toString(), 301);
     }
+    if (url.pathname === "/google832593f514e966a9.html") {
+      return new Response("google-site-verification: google832593f514e966a9.html\n", {
+        headers: { "content-type": "text/html; charset=utf-8" },
+      });
+    }
     if (url.pathname === "/api/bookings") {
       if (request.method === "GET") return listBookings(env);
       if (request.method === "POST") return createBooking(request, env);
