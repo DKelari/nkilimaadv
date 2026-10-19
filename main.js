@@ -285,9 +285,10 @@
     gap.className = "hour-key-gap";
     const labels = document.createElement("div");
     labels.className = "hour-key-row";
-    ["9a", "10a", "11a", "12p", "1p", "2p", "3p"].forEach(function (label) {
+    SLOTS.forEach(function (time) {
       const item = document.createElement("span");
-      item.textContent = label;
+      const hour = Number(time.slice(0, 2));
+      item.textContent = (hour % 12 || 12) + (hour >= 12 ? "p" : "a");
       labels.appendChild(item);
     });
     key.append(gap, labels);
