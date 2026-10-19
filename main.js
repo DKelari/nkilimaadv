@@ -678,3 +678,60 @@
 
   loadDiary();
 })();
+
+(function () {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (!("IntersectionObserver" in window)) return;
+
+  document.documentElement.classList.add("motion");
+
+  function tag(selector, kind, step) {
+    document.querySelectorAll(selector).forEach(function (el, index) {
+      if (el.classList.contains("reveal") || el.classList.contains("reveal-media")) return;
+      el.classList.add(kind);
+      el.style.setProperty("--reveal-delay", Math.min(index, 4) * step + "ms");
+    });
+  }
+
+  tag(".hero-copy .kicker", "reveal", 0);
+  tag(".hero h1", "reveal", 0);
+  tag(".hero-subtitle", "reveal", 0);
+  tag(".hero-copy .lede", "reveal", 0);
+  tag(".hero-copy .actions", "reveal", 0);
+  tag(".hero-meta li", "reveal", 55);
+  tag(".section-head", "reveal", 0);
+  tag(".deck", "reveal", 0);
+  tag(".desk-board article", "reveal", 80);
+  tag(".route-list li", "reveal", 70);
+  tag(".practice-item > div", "reveal", 0);
+  tag(".bio-copy > p", "reveal", 70);
+  tag(".glance", "reveal", 0);
+  tag(".affiliation-list li", "reveal", 50);
+  tag(".cred-list li", "reveal", 70);
+  tag(".hero-figure", "reveal-media", 0);
+  tag(".hours-card", "reveal-media", 0);
+  tag(".bio-portrait", "reveal-media", 0);
+  tag(".practice-figure", "reveal-media", 0);
+
+  document.querySelector(".hero h1")?.style.setProperty("--reveal-delay", "80ms");
+  document.querySelector(".hero-subtitle")?.style.setProperty("--reveal-delay", "160ms");
+  document.querySelector(".hero-copy .lede")?.style.setProperty("--reveal-delay", "230ms");
+  document.querySelector(".hero-copy .actions")?.style.setProperty("--reveal-delay", "300ms");
+  document.querySelector(".hero-figure")?.style.setProperty("--reveal-delay", "180ms");
+  document.querySelector(".hours-card")?.style.setProperty("--reveal-delay", "280ms");
+
+  const watcher = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        watcher.unobserve(entry.target);
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+  );
+
+  document.querySelectorAll(".reveal, .reveal-media").forEach(function (el) {
+    watcher.observe(el);
+  });
+})();
