@@ -683,6 +683,23 @@ a {
   margin-top: 1.75rem;
 }
 
+.bio-portrait {
+  margin: 0 auto;
+  max-width: 20rem;
+  overflow: hidden;
+  background: var(--navy);
+  border-top: 2px solid #c6a36a;
+}
+
+.bio-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .glance {
   background: var(--navy);
   color: var(--cream);
@@ -1437,11 +1454,40 @@ a {
 
 @media (min-width: 960px) {
   .hero-grid,
-  .bio-grid,
   .booking-layout {
     grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
     gap: 2.5rem;
     align-items: start;
+  }
+
+  .bio-grid {
+    grid-template-columns: minmax(0, 1fr) 17.5rem;
+    gap: 1.75rem 3rem;
+    align-items: start;
+  }
+
+  .bio-copy {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .bio-portrait {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    max-width: none;
+    margin: 0;
+  }
+
+  .bio-grid .glance {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .bio-grid .glance ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
   }
 
   .cred-list {
