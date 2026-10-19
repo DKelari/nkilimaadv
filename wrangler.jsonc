@@ -1,0 +1,24 @@
+{
+  "name": "nkilimaadv",
+  "compatibility_date": "2026-10-19",
+  "main": "worker.js",
+  "workers_dev": true,
+  "assets": {
+    "directory": ".",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nkilimaadv-bookings",
+      "database_id": "53da2397-fddc-44e8-af06-d5e015c8ea03"
+    }
+  ],
+  "routes": [
+    { "pattern": "nkilimaadv.com", "custom_domain": true },
+    { "pattern": "www.nkilimaadv.com", "custom_domain": true }
+  ]
+}

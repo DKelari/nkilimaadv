@@ -1,0 +1,12 @@
+.git
+.wrangler
+.gitignore
+.assetsignore
+worker.js
+wrangler.jsonc
+schema.sql
+server.py
+bookings.json
+bookings.tmp
+__pycache__
+node_modules
