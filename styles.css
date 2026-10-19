@@ -789,6 +789,11 @@ a {
   height: auto;
 }
 
+.practice-figure.practice-portrait {
+  width: min(100%, 32rem);
+  justify-self: start;
+}
+
 .affiliation-list {
   border-top: 1px solid var(--line);
 }
