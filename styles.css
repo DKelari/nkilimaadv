@@ -775,6 +775,20 @@ a {
   color: var(--ink-soft);
 }
 
+.practice-figure {
+  grid-column: 1 / -1;
+  margin: 0.35rem 0 0.15rem;
+  overflow: hidden;
+  background: var(--navy);
+  border-top: 2px solid #c6a36a;
+}
+
+.practice-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .affiliation-list {
   border-top: 1px solid var(--line);
 }
