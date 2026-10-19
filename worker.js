@@ -34,13 +34,13 @@ async function listBookings(env) {
 }
 
 async function createBooking(request, env) {
-  const length = Number(request.headers.get("content-length") || 0);
-  if (!Number.isFinite(length) || length <= 0 || length > 20000) {
+  const raw = await request.text();
+  if (!raw || raw.length > 20000) {
     return json({ error: "The booking could not be read." }, 400);
   }
   let payload;
   try {
-    payload = await request.json();
+    payload = JSON.parse(raw);
   } catch {
     return json({ error: "The booking could not be read." }, 400);
   }
@@ -51,7 +51,7 @@ async function createBooking(request, env) {
   const error = validate(payload);
   if (error) return json({ error: error.message }, error.status);
 
-  const record = error === null ? buildRecord(payload) : null;
+  const record = buildRecord(payload);
   const today = eatNow().isoDate;
   try {
     const existing = await env.DB.prepare(
