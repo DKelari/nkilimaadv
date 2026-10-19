@@ -241,6 +241,9 @@
     </script>
   </head>
   <body>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
     <a class="skip" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -499,95 +502,131 @@
             <h2 id="practice-title">Practice areas</h2>
           </header>
           <ol class="practice-list">
-            <li class="practice-item" id="family">
-              <span class="practice-num">01</span>
-              <div>
-                <h3>Family &amp; child law</h3>
-                <p>Legal counsel on divorce, child custody, guardianship, adoption, matrimonial property division, succession, trusts, and estate planning.</p>
+            <li class="practice-item fold is-open" id="family">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="true" aria-controls="family-panel">
+                  <span class="practice-num">01</span>
+                  <span class="fold-label">Family &amp; child law</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="family-panel">
+                <div class="fold-inner">
+                  <p>Legal counsel on divorce, child custody, guardianship, adoption, matrimonial property division, succession, trusts, and estate planning.</p>
+                  <figure class="practice-figure">
+                    <img
+                      src="family-law-consultation.jpg"
+                      width="1024"
+                      height="682"
+                      alt="An advocate speaking with a parent and child, with volumes titled Family Law and Child Law."
+                    />
+                  </figure>
+                </div>
               </div>
-              <figure class="practice-figure">
-                <img
-                  src="family-law-consultation.jpg"
-                  width="1024"
-                  height="682"
-                  alt="An advocate speaking with a parent and child, with volumes titled Family Law and Child Law."
-                />
-              </figure>
             </li>
-            <li class="practice-item" id="adr">
-              <span class="practice-num">02</span>
-              <div>
-                <h3>Alternative dispute resolution</h3>
-                <p>Mediation of commercial and personal disputes, including sessions conducted by Google Meet.</p>
+            <li class="practice-item fold" id="adr">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="adr-panel">
+                  <span class="practice-num">02</span>
+                  <span class="fold-label">Alternative dispute resolution</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="adr-panel">
+                <div class="fold-inner">
+                  <p>Mediation of commercial and personal disputes, including sessions conducted by Google Meet.</p>
+                  <figure class="practice-figure">
+                    <img
+                      src="alternative-dispute-resolution.jpg"
+                      width="1024"
+                      height="576"
+                      alt="Three people in a mediation meeting, beside the heading Alternative dispute resolution."
+                    />
+                  </figure>
+                </div>
               </div>
-              <figure class="practice-figure">
-                <img
-                  src="alternative-dispute-resolution.jpg"
-                  width="1024"
-                  height="576"
-                  alt="Three people in a mediation meeting, beside the heading Alternative dispute resolution."
-                />
-              </figure>
             </li>
-            <li class="practice-item" id="litigation">
-              <span class="practice-num">03</span>
-              <div>
-                <h3>Commercial &amp; civil litigation</h3>
-                <p>Advice and representation on contracts, compliance, and civil and commercial proceedings in Kenya.</p>
+            <li class="practice-item fold" id="litigation">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="litigation-panel">
+                  <span class="practice-num">03</span>
+                  <span class="fold-label">Commercial &amp; civil litigation</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="litigation-panel">
+                <div class="fold-inner">
+                  <p>Advice and representation on contracts, compliance, and civil and commercial proceedings in Kenya.</p>
+                  <figure class="practice-figure practice-portrait">
+                    <img
+                      src="commercial-civil-litigation.jpg"
+                      width="853"
+                      height="1024"
+                      alt="An advocate at a desk, with volumes titled Commercial Law and Civil Litigation."
+                    />
+                  </figure>
+                </div>
               </div>
-              <figure class="practice-figure practice-portrait">
-                <img
-                  src="commercial-civil-litigation.jpg"
-                  width="853"
-                  height="1024"
-                  alt="An advocate at a desk, with volumes titled Commercial Law and Civil Litigation."
-                />
-              </figure>
             </li>
-            <li class="practice-item" id="rights">
-              <span class="practice-num">04</span>
-              <div>
-                <h3>Human rights &amp; public interest law</h3>
-                <p>Legal advisory and representation on constitutional rights, human rights violations, access to justice, legal aid, gender equality, and child protection. Supporting NGOs, institutions, and individuals in promoting accountability, protecting fundamental freedoms, and advancing social justice through litigation, advocacy, and public legal awareness.</p>
+            <li class="practice-item fold" id="rights">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="rights-panel">
+                  <span class="practice-num">04</span>
+                  <span class="fold-label">Human rights &amp; public interest law</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="rights-panel">
+                <div class="fold-inner">
+                  <p>Legal advisory and representation on constitutional rights, human rights violations, access to justice, legal aid, gender equality, and child protection. Supporting NGOs, institutions, and individuals in promoting accountability, protecting fundamental freedoms, and advancing social justice through litigation, advocacy, and public legal awareness.</p>
+                  <figure class="practice-figure">
+                    <img
+                      src="human-rights-consultation.jpg"
+                      width="1024"
+                      height="682"
+                      alt="Two people in a consultation, with volumes titled Human Rights Law, Constitutional Law, and Public Interest Law."
+                    />
+                  </figure>
+                </div>
               </div>
-              <figure class="practice-figure">
-                <img
-                  src="human-rights-consultation.jpg"
-                  width="1024"
-                  height="682"
-                  alt="Two people in a consultation, with volumes titled Human Rights Law, Constitutional Law, and Public Interest Law."
-                />
-              </figure>
             </li>
-            <li class="practice-item" id="criminal">
-              <span class="practice-num">05</span>
-              <div>
-                <h3>Criminal law &amp; constitutional rights</h3>
-                <p>Providing legal representation and advisory services in criminal proceedings, including watching briefs in sexual offences cases to safeguard victims’ rights and interests. Advocating for the constitutional rights of accused persons, particularly in cases involving violations of due process, unlawful arrest or detention, and infringement of fair trial rights.</p>
+            <li class="practice-item fold" id="criminal">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="criminal-panel">
+                  <span class="practice-num">05</span>
+                  <span class="fold-label">Criminal law &amp; constitutional rights</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="criminal-panel">
+                <div class="fold-inner">
+                  <p>Providing legal representation and advisory services in criminal proceedings, including watching briefs in sexual offences cases to safeguard victims’ rights and interests. Advocating for the constitutional rights of accused persons, particularly in cases involving violations of due process, unlawful arrest or detention, and infringement of fair trial rights.</p>
+                  <figure class="practice-figure">
+                    <img
+                      src="criminal-law-constitutional-rights.jpg"
+                      width="1024"
+                      height="682"
+                      alt="A desk still life with volumes titled Criminal Law and Constitutional Rights, beside the Kenyan flag."
+                    />
+                  </figure>
+                </div>
               </div>
-              <figure class="practice-figure">
-                <img
-                  src="criminal-law-constitutional-rights.jpg"
-                  width="1024"
-                  height="682"
-                  alt="A desk still life with volumes titled Criminal Law and Constitutional Rights, beside the Kenyan flag."
-                />
-              </figure>
             </li>
-            <li class="practice-item" id="conveyancing">
-              <span class="practice-num">06</span>
-              <div>
-                <h3>Conveyancing &amp; property law</h3>
-                <p>Providing legal services in property transactions, including sale and purchase agreements, title transfers, leases, property due diligence, land registration, and completion of conveyancing transactions. Advising clients on property ownership, compliance, and the protection of their interests throughout the transaction process.</p>
+            <li class="practice-item fold" id="conveyancing">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="conveyancing-panel">
+                  <span class="practice-num">06</span>
+                  <span class="fold-label">Conveyancing &amp; property law</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="conveyancing-panel">
+                <div class="fold-inner">
+                  <p>Providing legal services in property transactions, including sale and purchase agreements, title transfers, leases, property due diligence, land registration, and completion of conveyancing transactions. Advising clients on property ownership, compliance, and the protection of their interests throughout the transaction process.</p>
+                  <figure class="practice-figure">
+                    <img
+                      src="conveyancing-property-law.jpg"
+                      width="1024"
+                      height="682"
+                      alt="Two people reviewing a property document, with a model house and keys on the desk."
+                    />
+                  </figure>
+                </div>
               </div>
-              <figure class="practice-figure">
-                <img
-                  src="conveyancing-property-law.jpg"
-                  width="1024"
-                  height="682"
-                  alt="Two people reviewing a property document, with a model house and keys on the desk."
-                />
-              </figure>
             </li>
           </ol>
         </div>
@@ -600,49 +639,137 @@
             <h2 id="affiliations-title">Affiliations</h2>
           </header>
           <ul class="affiliation-list">
-            <li>
-              <h3>Court-Annexed Mediation</h3>
-              <p>The Judiciary of Kenya. Serving as a Court-Annexed Mediator, facilitating the resolution of disputes through alternative dispute resolution mechanisms.</p>
+            <li class="fold is-open">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="true" aria-controls="aff-mediation">
+                  <span class="fold-label">Court-Annexed Mediation</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-mediation">
+                <div class="fold-inner">
+                  <p>The Judiciary of Kenya. Serving as a Court-Annexed Mediator, facilitating the resolution of disputes through alternative dispute resolution mechanisms.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Mediation Training</h3>
-              <p>Mediation Training Institute (MTI). Professional training in mediation and alternative dispute resolution.</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-mti">
+                  <span class="fold-label">Mediation Training</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-mti">
+                <div class="fold-inner">
+                  <p>Mediation Training Institute (MTI). Professional training in mediation and alternative dispute resolution.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Monitoring and Evaluation</h3>
-              <p>International Rescue Committee (IRC). Training in monitoring and evaluation, supporting programme implementation, performance tracking, and assessment of outcomes.</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-irc">
+                  <span class="fold-label">Monitoring and Evaluation</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-irc">
+                <div class="fold-inner">
+                  <p>International Rescue Committee (IRC). Training in monitoring and evaluation, supporting programme implementation, performance tracking, and assessment of outcomes.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Gender Committee</h3>
-              <p>Law Society of Kenya (LSK). Professional engagement in gender equality, access to justice, and the protection of the rights of vulnerable groups.</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-gender">
+                  <span class="fold-label">Gender Committee</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-gender">
+                <div class="fold-inner">
+                  <p>Law Society of Kenya (LSK). Professional engagement in gender equality, access to justice, and the protection of the rights of vulnerable groups.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Child Law Practitioners Committee</h3>
-              <p>Law Society of Kenya (LSK). Contributing to child-law practice, child protection, and the advancement of children’s rights.</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-child">
+                  <span class="fold-label">Child Law Practitioners Committee</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-child">
+                <div class="fold-inner">
+                  <p>Law Society of Kenya (LSK). Contributing to child-law practice, child protection, and the advancement of children’s rights.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Legal Aid and Awareness Committee</h3>
-              <p>Law Society of Kenya (LSK). Supporting legal aid initiatives, public legal education, and improved access to justice for underserved communities.</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-aid">
+                  <span class="fold-label">Legal Aid and Awareness Committee</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-aid">
+                <div class="fold-inner">
+                  <p>Law Society of Kenya (LSK). Supporting legal aid initiatives, public legal education, and improved access to justice for underserved communities.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Trauma-Informed Advocacy</h3>
-              <p>Federation of Women Lawyers (FIDA Kenya). Training in trauma-informed approaches to legal representation and advocacy, particularly for survivors of gender-based violence and other vulnerable persons.</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-trauma">
+                  <span class="fold-label">Trauma-Informed Advocacy</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-trauma">
+                <div class="fold-inner">
+                  <p>Federation of Women Lawyers (FIDA Kenya). Training in trauma-informed approaches to legal representation and advocacy, particularly for survivors of gender-based violence and other vulnerable persons.</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Federation of Women Lawyers (FIDA) Kenya</h3>
-              <p>Volunteer Advocate</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-fida">
+                  <span class="fold-label">Federation of Women Lawyers (FIDA) Kenya</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-fida">
+                <div class="fold-inner">
+                  <p>Volunteer Advocate</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Refugee Consortium of Kenya (RCK)</h3>
-              <p>Legal Aid Consultant</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-rck">
+                  <span class="fold-label">Refugee Consortium of Kenya (RCK)</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-rck">
+                <div class="fold-inner">
+                  <p>Legal Aid Consultant</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>National Legal Aid Service (NLAS)</h3>
-              <p>Pro Bono Counsel</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-nlas">
+                  <span class="fold-label">National Legal Aid Service (NLAS)</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-nlas">
+                <div class="fold-inner">
+                  <p>Pro Bono Counsel</p>
+                </div>
+              </div>
             </li>
-            <li>
-              <h3>Law Society of Kenya (LSK)</h3>
-              <p>Active Member</p>
+            <li class="fold">
+              <h3>
+                <button type="button" class="fold-toggle" aria-expanded="false" aria-controls="aff-lsk">
+                  <span class="fold-label">Law Society of Kenya (LSK)</span>
+                </button>
+              </h3>
+              <div class="fold-panel" id="aff-lsk">
+                <div class="fold-inner">
+                  <p>Active Member</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>

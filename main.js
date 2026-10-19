@@ -704,10 +704,10 @@
   tag(".deck", "reveal", 0);
   tag(".desk-board article", "reveal", 80);
   tag(".route-list li", "reveal", 70);
-  tag(".practice-item > div", "reveal", 0);
+  tag(".fold-toggle", "reveal", 45);
+  tag(".fold-inner > p", "reveal", 60);
   tag(".bio-copy > p", "reveal", 70);
   tag(".glance", "reveal", 0);
-  tag(".affiliation-list li", "reveal", 50);
   tag(".cred-list li", "reveal", 70);
   tag(".hero-figure", "reveal-media", 0);
   tag(".hours-card", "reveal-media", 0);
@@ -735,4 +735,38 @@
   document.querySelectorAll(".reveal, .reveal-media").forEach(function (el) {
     watcher.observe(el);
   });
+})();
+
+(function () {
+  function setFold(fold, open) {
+    var button = fold.querySelector(".fold-toggle");
+    var panel = fold.querySelector(".fold-panel");
+    fold.classList.toggle("is-open", open);
+    if (button) button.setAttribute("aria-expanded", String(open));
+    if (panel) {
+      if (open) panel.removeAttribute("inert");
+      else panel.setAttribute("inert", "");
+    }
+  }
+
+  document.querySelectorAll(".fold").forEach(function (fold) {
+    var button = fold.querySelector(".fold-toggle");
+    if (!button) return;
+    setFold(fold, fold.classList.contains("is-open"));
+    button.addEventListener("click", function () {
+      setFold(fold, !fold.classList.contains("is-open"));
+    });
+  });
+
+  function openFromHash() {
+    var id = decodeURIComponent(location.hash.replace(/^#/, ""));
+    if (!id) return;
+    var node = document.getElementById(id);
+    if (!node) return;
+    var fold = node.classList.contains("fold") ? node : node.closest(".fold");
+    if (fold) setFold(fold, true);
+  }
+
+  openFromHash();
+  window.addEventListener("hashchange", openFromHash);
 })();
