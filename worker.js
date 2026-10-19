@@ -5,6 +5,7 @@ const MATTERS = new Set([
   "Alternative dispute resolution",
   "Commercial & civil litigation",
   "Human rights & public interest",
+  "Criminal law & constitutional rights",
   "Other",
 ]);
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;

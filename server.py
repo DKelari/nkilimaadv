@@ -21,6 +21,7 @@ MATTERS = {
     "Alternative dispute resolution",
     "Commercial & civil litigation",
     "Human rights & public interest",
+    "Criminal law & constitutional rights",
     "Other",
 }
 EMAIL_RE = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
