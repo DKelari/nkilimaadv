@@ -2,7 +2,7 @@
   "name": "nkilimaadv",
   "compatibility_date": "2026-10-19",
   "main": "worker.js",
-  "workers_dev": true,
+  "workers_dev": false,
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
