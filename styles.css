@@ -1512,25 +1512,30 @@ html.js .fold:not(.is-open) .fold-panel {
   font-style: normal;
 }
 
-.reach-list {
-  display: grid;
-  gap: 0.15rem;
-  margin: 0;
+.reach-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
 }
 
-.reach-item {
-  display: flex;
+.reach-btn {
+  display: inline-flex;
   align-items: center;
   gap: 0.7rem;
-  width: fit-content;
+  min-height: 3.4rem;
   max-width: 100%;
-  color: inherit;
+  padding: 0.55rem 0.95rem 0.55rem 0.75rem;
+  border: 1px solid var(--navy);
+  background: white;
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.25;
   text-decoration: none;
 }
 
-.reach-item svg {
-  width: 1.45rem;
-  height: 1.45rem;
+.reach-btn svg {
+  width: 1.35rem;
+  height: 1.35rem;
   flex: 0 0 auto;
   color: var(--navy);
 }
@@ -1544,14 +1549,14 @@ html.js .fold:not(.is-open) .fold-panel {
   text-transform: uppercase;
 }
 
-.reach-item:hover span {
-  text-decoration: underline;
-  text-decoration-color: var(--brass);
-  text-underline-offset: 0.16em;
+.reach-btn:hover {
+  background: var(--navy);
+  color: var(--cream);
 }
 
-.reach-item:hover .reach-kind {
-  text-decoration: none;
+.reach-btn:hover svg,
+.reach-btn:hover .reach-kind {
+  color: #d9c7a2;
 }
 
 .contact-links {
@@ -1724,8 +1729,12 @@ html.js .fold:not(.is-open) .fold-panel {
 
 @media (min-width: 900px) {
   .chambers-row {
-    grid-template-columns: 1.4fr 1fr auto;
+    grid-template-columns: minmax(16rem, 0.7fr) minmax(0, 1.6fr);
     align-items: start;
+  }
+
+  .reach-actions {
+    grid-column: 1 / -1;
   }
 }
 

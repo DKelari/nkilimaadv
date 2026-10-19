@@ -13,6 +13,8 @@ Consultations are held in chambers at View Park Towers, Nairobi, or via Google M
 - Chambers: View Park Towers, 19th Floor, Suite 19, Utalii Lane, Nairobi, Kenya
 - Postal address: P.O. Box 27999-00100, Nairobi
 - Hours: Monday to Friday, 12:00 p.m. to 6:00 p.m. East Africa Time
+- Directions, Google: https://www.google.com/maps/dir/?api=1&destination=View+Park+Towers,+Utalii+Lane,+Nairobi
+- Directions, satellite: https://www.google.com/maps?q=View+Park+Towers,+Utalii+Lane,+Nairobi&t=k&z=18
 - LinkedIn: https://www.linkedin.com/in/naomi-kajaira-5913209b/
 
 ## Practice
