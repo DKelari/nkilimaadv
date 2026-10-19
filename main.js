@@ -509,11 +509,12 @@
     dayNote.textContent = "Each consultation is one hour. The last concludes at 6:00 p.m.";
     if (form) form.hidden = false;
     if (summary) {
-      summary.textContent =
-        formatLong(selectedDay.year, selectedDay.month, selectedDay.day) +
-        " · " +
-        formatSlot(selectedTime) +
-        " EAT";
+      summary.replaceChildren();
+      const when = document.createElement("span");
+      when.textContent = formatLong(selectedDay.year, selectedDay.month, selectedDay.day);
+      const slot = document.createElement("span");
+      slot.textContent = formatSlot(selectedTime) + " EAT";
+      summary.append(when, slot);
     }
   }
 
