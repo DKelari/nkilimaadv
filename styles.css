@@ -337,12 +337,49 @@ a {
   background: var(--navy);
 }
 
+.nav-reach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 auto;
+}
+
+.site-header.is-open .nav-reach {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
 .site-header.is-open .nav-links a {
   font-family: var(--serif);
   font-size: clamp(1.7rem, 7vw, 2rem);
   line-height: 1.2;
   min-height: 2.75rem;
   padding: 0.2rem 0;
+  color: var(--cream);
+}
+
+.site-header.is-open .nav-links .nav-icon {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.4rem 0.9rem 0.4rem 0.7rem;
+  border: 1px solid rgba(248, 243, 236, 0.4);
   color: var(--cream);
 }
 
@@ -1553,6 +1590,35 @@ html.js .fold:not(.is-open) .fold-panel {
   gap: 0.75rem;
 }
 
+.footer-reach {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.15rem 0 0;
+}
+
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0.35rem 0.9rem 0.35rem 0.7rem;
+  border: 1px solid rgba(248, 243, 236, 0.4);
+  color: var(--cream);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.icon-link svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  flex: 0 0 auto;
+}
+
+.icon-link:hover {
+  background: rgba(248, 243, 236, 0.08);
+}
+
 .disclaimer {
   color: rgba(246, 244, 239, 0.72);
 }
@@ -1755,6 +1821,34 @@ html.js .fold:not(.is-open) .fold-panel {
     min-height: 2.75rem;
     padding: 0.35rem 0.9rem;
     font-size: 0.92rem;
+  }
+
+  .nav-reach,
+  .site-header.is-open .nav-reach {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .nav-links .nav-icon,
+  .site-header.is-open .nav-links .nav-icon {
+    justify-content: center;
+    width: 2.75rem;
+    min-width: 2.75rem;
+    padding: 0;
+    border: 1px solid rgba(248, 243, 236, 0.35);
+  }
+
+  .nav-links .nav-icon span,
+  .site-header.is-open .nav-links .nav-icon span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
 }
