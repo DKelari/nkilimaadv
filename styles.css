@@ -1516,48 +1516,43 @@ html.js .fold:not(.is-open) .fold-panel {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem 1.5rem;
+  gap: 1rem 1.35rem;
 }
 
 .contact-qr {
-  width: min(100%, 11.5rem);
+  width: min(100%, 18.5rem);
   height: auto;
   flex: 0 0 auto;
   background: white;
-  padding: 0.35rem;
+  padding: 0.4rem;
   border: 1px solid var(--line);
 }
 
 .contact-copy {
-  flex: 1 1 16rem;
-  min-width: min(100%, 16rem);
+  flex: 1 1 14rem;
+  min-width: min(100%, 14rem);
+}
+
+.contact-lead,
+.contact-name,
+.contact-mail {
+  margin: 0;
 }
 
 .contact-lead {
-  margin: 0;
-  max-width: 36rem;
+  max-width: 22rem;
 }
 
-.contact-facts {
-  list-style: none;
-  margin: 0.85rem 0 0.35rem;
-  padding: 0;
+.contact-name {
+  margin-top: 0.55rem;
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  line-height: 1.15;
 }
 
-.contact-facts li {
-  display: grid;
-  grid-template-columns: 5.6rem minmax(0, 1fr);
-  gap: 0.35rem 0.65rem;
-  align-items: baseline;
-  margin: 0.28rem 0;
-}
-
-.contact-facts span {
-  color: var(--brass-deep);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.contact-mail {
+  margin-top: 0.3rem;
 }
 
 .contact-links {

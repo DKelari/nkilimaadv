@@ -24,6 +24,16 @@ export default {
         headers: { "content-type": "text/html; charset=utf-8" },
       });
     }
+    if (url.pathname === "/naomi-kilima.vcf") {
+      const file = await env.ASSETS.fetch(request);
+      return new Response(file.body, {
+        status: file.status,
+        headers: {
+          "content-type": "text/vcard; charset=utf-8",
+          "content-disposition": 'inline; filename="Naomi-Kajaira-Kilima.vcf"',
+        },
+      });
+    }
     if (url.pathname === "/api/bookings") {
       if (request.method === "GET") return listBookings(env);
       if (request.method === "POST") return createBooking(request, env);
