@@ -1520,7 +1520,7 @@ html.js .fold:not(.is-open) .fold-panel {
 }
 
 .contact-qr {
-  width: min(100%, 18.5rem);
+  width: min(100%, 10.5rem);
   height: auto;
   flex: 0 0 auto;
   background: white;

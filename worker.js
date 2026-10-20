@@ -30,7 +30,8 @@ export default {
         status: file.status,
         headers: {
           "content-type": "text/vcard; charset=utf-8",
-          "content-disposition": 'inline; filename="Naomi-Kajaira-Kilima.vcf"',
+          "content-disposition": 'attachment; filename="Naomi-Kajaira-Kilima.vcf"',
+          "x-content-type-options": "nosniff",
         },
       });
     }
