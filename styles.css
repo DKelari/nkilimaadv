@@ -1483,11 +1483,11 @@ html.js .fold:not(.is-open) .fold-panel {
 }
 
 .contact-qr {
-  width: min(100%, 22rem);
+  width: min(100%, 11.5rem);
   height: auto;
   flex: 0 0 auto;
   background: white;
-  padding: 0.55rem;
+  padding: 0.35rem;
   border: 1px solid var(--line);
 }
 
