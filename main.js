@@ -709,6 +709,7 @@
   tag(".bio-copy > p", "reveal", 70);
   tag(".glance", "reveal", 0);
   tag(".cred-list li", "reveal", 70);
+  tag(".fact-list article", "reveal", 60);
   tag(".hero-figure", "reveal-media", 0);
   tag(".hours-card", "reveal-media", 0);
   tag(".bio-portrait", "reveal-media", 0);

@@ -600,6 +600,22 @@ a {
   padding: clamp(3.5rem, 7vw, 5.75rem) 0;
 }
 
+.fact-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.fact-list h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.2rem;
+}
+
+.fact-list p {
+  margin: 0;
+  max-width: 42rem;
+}
+
 .section-rule {
   background: var(--stone);
   border-top: 1px solid var(--line);
